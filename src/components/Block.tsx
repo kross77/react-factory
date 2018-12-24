@@ -1,10 +1,8 @@
-import * as React from 'react';
-import { Component } from 'react';
-import styled, { StyledComponentClass } from 'styled-components';
+import * as React from "react";
+import { Component } from "react";
+import styled from "styled-components";
 
-
-const Block =
-  styled.div`
+const Block = styled.div`
   display: flex;
   ${({ width }) => width && `width: ${width}`}; //
   ${({ height }) => height && `height: ${height}`};
@@ -14,7 +12,7 @@ const Block =
   ${({ minHeight }) => minHeight && `min-height: ${minHeight}`};
   ${({ minWidth }) => minWidth && `min-width: ${minWidth}`};
   ${({ direction }) => direction && `flex-direction: ${direction}`};
-  ${({ column }) => column && 'flex-direction: column'};
+  ${({ column }) => column && "flex-direction: column"};
   ${({ flex }) => flex && `flex: ${flex}`};
   ${({ justify }) => justify && `justify-content: ${justify}`};
   ${({ align }) => align && `align-items: ${align}`};
@@ -30,7 +28,6 @@ const Block =
   ${({ p }) => p && `padding: ${p}`};
   ${({ m }) => m && `margin: ${m}`};
 `;
-
 
 // PropsType = { right: '8px' }
 // $FlowFixMe
@@ -59,22 +56,25 @@ export const RelativeBlock = styled(Block)`
   ${({ bottom }) => bottom && `bottom: ${bottom};`}
 `;
 
-export const Row = props =>
-  (<Block
+export const Row = props => (
+  <Block
     width="100%"
     height="100%"
     justify="center"
     align="center"
     {...props}
-  />);
+  />
+);
 
-export const Column = props => (<Block
-  width="100%"
-  height="100%"
-  justify="center"
-  align="center"
-  direction="column"
-  {...props}
-/>);
+export const Column = props => (
+  <Block
+    width="100%"
+    height="100%"
+    justify="center"
+    align="center"
+    direction="column"
+    {...props}
+  />
+);
 
 export default Block;
