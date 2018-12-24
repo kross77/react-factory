@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "lib": ["DOM", "ES6", "DOM.Iterable", "ScriptHost", "es2015"],
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceRoot": "scripts",
+    "types": ["node", "aws-sdk"],
+    "noEmit": true
+  },
+  "include": [
+    ".migrations/**/*.ts",
+    ".seeds/**/*.ts",
+    "dynamo/**/*.ts",
+    "s3/**/*.ts",
+    "scripts/**/*.ts",
+    "utilities/**/*.ts"
+  ]
+}
